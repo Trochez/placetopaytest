@@ -16,15 +16,7 @@ $client = new SoapClient('https://test.placetopay.com/soap/pse/?wsdl');
 
 $data ="";
 
-/*
-$file = 'cache/' . basename($_SERVER['SCRIPT_NAME']); //location of cache file
-$current_time = time();
-$cache_last_modified = filemtime($file); //time when the cache file was last modified
 
-if(file_exists($file) && ($current_time < strtotime('+1 day', $cache_last_modified))){ //check if cache file exists and hasn't expired yet
-  include($file); //include cache file
-}else{
-  ob_start();*/
 if(function_exists('apcu_fetch')){
 	if($DEBUG == 1)echo "enter to apcu <br>";
 	$data = apcu_fetch("bancos");
@@ -39,8 +31,6 @@ if(function_exists('apcu_fetch')){
 		else{
 			if($DEBUG == 1)echo "enter to expired cache banks<br>";
 			$data = $client->getBankList(array('auth'=>array('login' => $login, 'tranKey' => $hashString, 'seed' => $seed, 'aditional'=>array('item' => array('name' => 'Juan Diego','value' => '0')))));
-			//setcookie("bancos", json_encode($data));
-			//setcookie("date", date('Ymd H:m:s'));
 			apcu_clear_cache();
 			apcu_add('bancos', $data);
 			apcu_add('date', date('Ymd H:m:s'));
@@ -51,8 +41,6 @@ if(function_exists('apcu_fetch')){
 		if($DEBUG == 1)echo "enter empty cache banks<br>";
 
 		$data = $client->getBankList(array('auth'=>array('login' => $login, 'tranKey' => $hashString, 'seed' => $seed, 'aditional'=>array('item' => array('name' => 'Juan Diego','value' => '0')))));
-		//setcookie("bancos", json_encode($data));
-		//setcookie("date", date('Ymd H:m:s'));
 		apcu_clear_cache();
 		apcu_add('bancos', $data);
 		apcu_add('date', date('Ymd H:m:s'));

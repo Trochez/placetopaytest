@@ -87,9 +87,6 @@ $bankCode = $params['bankCode'];
 
 if($DEBUG == 1)exit();
 
-//$_GET['transaction'] = $id;
-//$_GET['state'] = $state;
-
 header('Location: testpay.php?transaction='.$id.'&state='.$state."&totalAmount=".$totalAmount."&tip=".$tip);
 
 
