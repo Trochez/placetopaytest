@@ -16,7 +16,7 @@ en respuesta de la prueba enviada por Placetopay.
  Si se inicia el procedimiento de pago desde  cero (cargar la página sin
  parámetros GET), la lista de transacción se inicializa de nueva.
 
-->La carpeta image contiene la imagen de fondo de la página principal
+->La carpeta images contiene la imagen de fondo de la página principal
 
 ***************Documento escrito por Juan Diego Tróchez Montoya****************
 ///////////////////////juan.trochez@correounivalle.edu.co//////////////////////
