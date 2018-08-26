@@ -414,6 +414,16 @@ if ($DEBUG == 1)echo "transaction_list ".$transaction_list."<br>";
 				params[k].style = 'background-color:red;';
 				cnt++;
 			}
+			else if(k == "emailAddress_person"){
+				if((params[k].value.indexOf(".") == -1) && (params[k].value.indexOf("@") == -1)){
+					params[k].style = 'background-color:red;';
+					alert("Digite un correo valido");
+					return;
+				}
+				else{
+					params[k].style = 'background-color:white;';
+				}
+			}
 			else if(params[k].value == ""){
 				params[k].style = 'background-color:red;';
 				cnt++;
@@ -434,13 +444,7 @@ if ($DEBUG == 1)echo "transaction_list ".$transaction_list."<br>";
 				
 
 			}
-			else if(k == "emailAddress_person"){
-				if((params[k].value.indexOf(".") == -1) && (params[k].value.indexOf("@") == -1)){
-					params[k].style = 'background-color:red;';
-					alert("Digite un correo valido");
-					return;
-				}
-			}
+
 
 			console.log(document.getElementById(k).value);
 
