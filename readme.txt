@@ -1,20 +1,22 @@
 -------------------------------Prueba placetopay-----------------------------
-Este repositorio contiene los archivos desarrollados por juan diego tr�chez M.
+Este repositorio contiene los archivos desarrollados por juan diego tróchez M.
 en respuesta de la prueba enviada por Placetopay.
 
-->La p�gina principal es testpay.php
+->La página principal es testpay.php
 
-->La p�gina phptransactiongo.php realiza la transacci�n cuando la p�gina
- principal le env�a los datos por post y retorna a la p�gina principal
- entregando los valores de respuesta del servicio de transacci�n.
+->La página phptransactiongo.php realiza la transacción cuando la página
+ principal le envía los datos por post y retorna a la página principal
+ entregando los valores de respuesta del servicio de transacción.
 
-->Para garantizar el almacenamiento de informaci�n en cache es necesario
- tener instalado el m�dulo php php_apcu, De lo contrario la informaci�n que
- se deb�a guardar en cache es almacenada en forma de cookies
+->Para garantizar el almacenamiento de información en cache es necesario
+ tener instalado el módulo php php_apcu, De lo contrario la información que
+ se debía guardar en cache es almacenada en forma de cookies
 
-->La p�gina formulario muestra todas las transacciones realizadas seguidamente.
- Si se inicia el procedimiento de pago desde  cero (cargar la p�gina sin
- par�metros GET), la lista de transacci�n se inicializa de nueva.
+->La página formulario muestra todas las transacciones realizadas seguidamente.
+ Si se inicia el procedimiento de pago desde  cero (cargar la página sin
+ parámetros GET), la lista de transacción se inicializa de nueva.
 
-***************Documento escrito por Juan Diego Tr�chez Montoya****************
+->La carpeta image contiene la imagen de fondo de la página principal
+
+***************Documento escrito por Juan Diego Tróchez Montoya****************
 ///////////////////////juan.trochez@correounivalle.edu.co//////////////////////
