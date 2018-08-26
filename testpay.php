@@ -424,7 +424,7 @@ if ($DEBUG == 1)echo "transaction_list ".$transaction_list."<br>";
 				if(isNaN(parseInt(params[k].value))){
 					console.log("cathc");
 					params[k].style = 'background-color:red;';
-					alert("Revisar campo en rojo, su valor sólo puede ser numperico");
+					alert("Revisar campo en rojo, su valor sólo puede ser numérico");
 					return;
 				}
 				else{
